@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "212717431001",
+    "project_id": "superearning-d7742",
+    "storage_bucket": "superearning-d7742.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212717431001:android:d6049e1e39875dad15f6c8",
+        "android_client_info": {
+          "package_name": "com.jihan.superearning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF-R0DY9fTJ5z0klBX7Hui_aREtK39OAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212717431001:android:137a725ad8482e1c15f6c8",
+        "android_client_info": {
+          "package_name": "com.jihan.superearningadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF-R0DY9fTJ5z0klBX7Hui_aREtK39OAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
