@@ -1,0 +1,10 @@
+{
+  "appId": "com.jihan.superearning",
+  "appName": "SUPER EARNING",
+  "webDir": "www",
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    }
+  }
+}
