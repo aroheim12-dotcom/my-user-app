@@ -33,8 +33,19 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Setup Capacitor Android
+        run: |
+          if [ ! -d "android" ]; then
+            npx cap add android
+          else
+            npx cap sync android
+          fi
+
       - name: Copy google-services.json
-        run: cp google-services.json android/app/google-services.json || true
+        run: |
+          if [ -f google-services.json ]; then
+            cp google-services.json android/app/google-services.json
+          fi
 
       - name: Build Android APK
         run: |
