@@ -30,18 +30,15 @@ jobs:
             unzip www.zip -d www
           fi
 
-      - name: Install Dependencies
+      - name: Install Dependencies & Capacitor
         run: |
           npm install
-          npm install @capacitor/app --save
+          npm install @capacitor/core @capacitor/cli @capacitor/android @capacitor/app --save
 
-      - name: Add or Sync Capacitor Android
+      - name: Add Android & Sync
         run: |
-          if [ ! -d "android" ]; then
-            npx cap add android
-          else
-            npx cap sync android
-          fi
+          npx cap add android || true
+          npx cap sync android
 
       - name: Copy google-services.json
         run: |
