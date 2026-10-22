@@ -31,7 +31,9 @@ jobs:
           fi
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install @capacitor/app
 
       - name: Add Capacitor Android
         run: npx cap add android
