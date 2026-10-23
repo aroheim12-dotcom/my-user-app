@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Java
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: 'zulu'
@@ -30,16 +30,17 @@ jobs:
             unzip www.zip -d www
           fi
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install Dependencies & Capacitor App Plugin
+        run: |
+          npm install
+          npm install @capacitor/app
 
       - name: Setup Capacitor Android
         run: |
           if [ ! -d "android" ]; then
             npx cap add android
-          else
-            npx cap sync android
           fi
+          npx cap sync android
 
       - name: Copy google-services.json
         run: |
@@ -58,3 +59,4 @@ jobs:
         with:
           name: UserApp-Release
           path: android/app/build/outputs/apk/debug/app-debug.apk
+          
